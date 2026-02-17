@@ -1,0 +1,19 @@
+{
+  "name": "order-service",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "express": "^5.2.1"    
+  },
+  "devDependencies": {
+    "@types/amqplib": "^0.10.8",
+    "@types/express": "^5.0.6",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
