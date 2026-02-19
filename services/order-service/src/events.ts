@@ -1,5 +1,3 @@
-export const EXCHANGE = "saga_exchange"
-
 export const EVENTS = {
   ORDER_CREATED: "order.created",
   ORDER_COMPLETED: "order.completed",
@@ -11,3 +9,6 @@ export const EVENTS = {
   PAYMENT_PROCESSED: "payment.processed",
   PAYMENT_FAILED: "payment.failed",
 }
+
+export const EXCHANGE = "saga_exchange"
+

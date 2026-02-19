@@ -26,7 +26,9 @@ async function bootstrap() {
       channel.publish(
         EXCHANGE,
         EVENTS.INVENTORY_RESERVED,
-        Buffer.from(JSON.stringify({ orderId: order.orderId })),
+        Buffer.from(JSON.stringify(
+          { orderId: order.orderId }
+        )),
         { persistent: true }
       )
     } else {
