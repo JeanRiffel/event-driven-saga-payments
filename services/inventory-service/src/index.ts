@@ -7,11 +7,15 @@ async function bootstrap() {
 
   await channel.assertExchange(EXCHANGE, "topic", { durable: true })
 
-  const q = await channel.assertQueue("inventory_service_queue", {
+  const q = await channel.assertQueue(
+    "inventory_service_queue", {
     durable: true,
   })
 
-  await channel.bindQueue(q.queue, EXCHANGE, EVENTS.ORDER_CREATED)
+  await channel.bindQueue(
+    q.queue, EXCHANGE, 
+    EVENTS.ORDER_CREATED
+  )
 
   channel.consume(q.queue, (msg) => {
     if (!msg) return
